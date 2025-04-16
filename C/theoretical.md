@@ -269,7 +269,7 @@
     | `unsigned long` 32      | 32     | 0 到 2^32 - 1                 | `UL`        | 0 到 4294967295           |
 
 2. 八进制整数 0～7，首位是0 eg.0123
-    十六进制整数 0～9 a～f 前缀是0x 0X eg.0x123
+   -  十六进制整数 0～9 a～f 前缀是0x 0X eg.0x123
 3. 'A'=64 'a'=97 ASCII 256
 4. 转义p128
 5. 运算符的优先级和结合性
@@ -311,17 +311,17 @@
     ```
     x>>(p-n-1) & ~(~0<<n)
 8. 长度运算符 sizeof
-    int a;
-    sizeof(a) 4bytes 32位
-    sizeof(double) 8bytes 64位
+    - int a;
+    - sizeof(a) 4bytes 32位
+    - sizeof(double) 8bytes 64位
 
 ## from HW
 1. !(x>0||y>0) <=> !(x>0)&&!(y>0)
-   only TRUE when x,y both <= 0
+   - only TRUE when x,y both <= 0
 2. if sizeof(int) is 4, the max integer is **2<sup>31</sup>-1**
 3. (z=0,(x=2)||(z=1),z)
-    in (x=2)||(z=1), x=2 return 2, because of '||', z=1 won't be executed
-    so ultimat output is **0**
+    - in (x=2)||(z=1), x=2 return 2, because of '||', z=1 won't be executed
+    - so ultimat output is **0**
 4. c语言 三目 ：exp1 ? exp2 : exp3
 5. 输出：k=11,k=13,k=b
     ```c
@@ -341,13 +341,13 @@
     printf("%d\n",(a=3*5,a*4,a+5));
     ```
 8.  设字符型变量x的值是064，表达式 ~ x ^ x << 2 & x 的值是
-    八进制064->52->0011 0100
-    优先级：~ << & ^，正确执行顺序：(~ x) ^ ((x << 2) & x)
-    ~x : 1100 1011
-    x<<2 : 1101 0000
-    ((x << 2) & x) : 0001 0000
-    (!x) ^ ((x << 2) & x) :0010 0100
-    output : 1101 1011 -> 219 -> 0333
+    - 八进制064->52->0011 0100
+    - 优先级：~ << & ^，正确执行顺序：(~ x) ^ ((x << 2) & x)
+    - ~x : 1100 1011
+    - x<<2 : 1101 0000
+    - ((x << 2) & x) : 0001 0000
+    - (!x) ^ ((x << 2) & x) :0010 0100
+    - output : 1101 1011 -> 219 -> 0333
 
 9.  正确赋值语句
     - t += 1;
