@@ -712,8 +712,24 @@
 13. 字符串数组scanf时不需要&
     ![alt text](image-12.png)
 14. 数组结构stu[MAX], \*p，用p=stu，函数定义*p，函数中p[i]，使用函数p(见第九章编程题函数题2)
+    ```c
+    struct complex{
+        int real;
+        int imag;
+    };
+    struct complex multiply(struct complex x, struct complex y);
+    int main()
+    {
+        struct complex product, x, y;
+
+        scanf("%d%d%d%d", &x.real, &x.imag, &y.real, &y.imag);
+        product = multiply(x, y);
+        return 0;
+    }
+    ```
 15. 编程7-2 7-4 7-5 7-6 7-8
 16. 数组名（比如字符数组）在 scanf 时 不需要加 &；
     `scanf("%s",stu[3].name);`
 
 ## unsured结构题
+1. 一个结构类型变量所占的内存空间是其各个成员所占内存空间之和
